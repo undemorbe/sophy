@@ -9,6 +9,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # State managment
+  mobx: ^2.5.0
+  get_it: ^9.2.0
+  # Debug Logger 
+  talker_flutter: ^5.1.9
+  talker_dio_logger: ^5.1.9
+  # Network connections
+  dio: ^5.9.0
+  # Local db
+  hive: ^2.2.3
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.6
+  google_fonts: ^6.3.3
 
 dev_dependencies:
   flutter_test:
