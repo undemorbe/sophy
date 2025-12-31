@@ -1,5 +1,5 @@
 name: sophy
-description: "A new Flutter project."
+description: "Music now and always!"
 publish_to: 'none'
 version: 0.1.0
 
@@ -7,26 +7,30 @@ environment:
   sdk: ^3.10.3
 
 dependencies:
+  build_runner: ^2.4.6
+  dio: ^5.9.0
   flutter:
     sdk: flutter
-  # State managment
-  mobx: ^2.5.0
   get_it: ^9.2.0
-  # Debug Logger 
-  talker_flutter: ^5.1.9
-  talker_dio_logger: ^5.1.9
-  # Network connections
-  dio: ^5.9.0
-  # Local db
+  go_router: ^17.0.1
+  google_fonts: ^6.3.3
   hive: ^2.2.3
   hive_generator: ^2.0.1
-  build_runner: ^2.4.6
-  google_fonts: ^6.3.3
+  mobx: ^2.5.0
+  supabase: ^2.10.2
+  talker_dio_logger: ^5.1.9
+  talker_flutter: ^5.1.9
+  supabase_flutter: ^2.10.2
+  flutter_dotenv: ^6.0.0
 
 dev_dependencies:
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - .env
 
 flutter:
   uses-material-design: true
