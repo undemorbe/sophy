@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:sophy/features/presentation/widgets/cached_image.dart';
+import 'package:sophy/features/presentation/widgets/icon_button.dart';
 
 class TrackCard extends StatelessWidget {
   const TrackCard({
     super.key,
     required this.trackName,
     required this.artistName,
-    required this.trackImageUrl,
+    required this.musicImageUrl,
     this.datePublishedFormated,
   });
 
   final String trackName;
   final String artistName;
-  final String trackImageUrl;
+  final String musicImageUrl;
   final String? datePublishedFormated;
 
   @override
@@ -19,9 +21,9 @@ class TrackCard extends StatelessWidget {
     final mediaQuery = MediaQuery.of(context);
     final themeof = Theme.of(context);
     return Container(
-      height: mediaQuery.size.height * 0.3,
+      height: mediaQuery.size.height * 0.4,
       width: mediaQuery.size.width,
-      padding: EdgeInsets.all(25),
+      padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(10),
@@ -29,63 +31,94 @@ class TrackCard extends StatelessWidget {
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          Container(child: Image.network(trackImageUrl)),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10.0),
+            child: MyCachedImage(
+              imageUrl: musicImageUrl,
+              duration: Duration(milliseconds: 500),
+              fit: BoxFit.cover,
+              height: mediaQuery.size.height * 0.39,
+              width: mediaQuery.size.width,
+            ),
+          ),
           Container(
-            color: themeof.colorScheme.primary,
+            height: mediaQuery.size.height * 0.1,
+            width: mediaQuery.size.width,
             decoration: BoxDecoration(
-              color: Colors.transparent,
+              color: themeof.colorScheme.primary,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10),
               ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      trackName,
-                      style: themeof.textTheme.titleMedium?.copyWith(
-                        color: themeof.colorScheme.onPrimary,
-                      ),
-                    ),
-                    Text(
-                      artistName,
-                      style: themeof.textTheme.bodyMedium?.copyWith(
-                        color: themeof.colorScheme.onPrimary,
-                      ),
-                    ),
-                    if (datePublishedFormated != null)
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18.0,
+                vertical: 12,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
                       Text(
-                        datePublishedFormated!,
-                        style: themeof.textTheme.bodySmall?.copyWith(
+                        trackName,
+                        style: themeof.textTheme.titleMedium?.copyWith(
                           color: themeof.colorScheme.onPrimary,
                         ),
                       ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton.outlined(
-                      onPressed: () {},
-                      icon: Icon(Icons.favorite),
-                      // TODO add favoritism + check is favorite
-                      constraints: BoxConstraints.tightFor(
-                        width: 30,
-                        height: 30,
+                      Text(
+                        artistName,
+                        style: themeof.textTheme.bodyMedium?.copyWith(
+                          color: themeof.colorScheme.onPrimary,
+                        ),
                       ),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.play_arrow),
-                      onPressed: () {
-                        // TODO add play action
-                      },
-                    ),
-                  ],
-                ),
-              ],
+                      if (datePublishedFormated != null)
+                        Text(
+                          datePublishedFormated!,
+                          style: themeof.textTheme.bodySmall?.copyWith(
+                            color: themeof.colorScheme.onPrimary,
+                          ),
+                        ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      MyIconButton(
+                        width: 35,
+                        height: 35,
+                        icon: Center(
+                          child: Icon(
+                            Icons.favorite,
+                            size: 35 / 2,
+                            color: themeof.colorScheme.onPrimary,
+                          ),
+                        ),
+                        onPressed: () {
+                          // TODO add favorite action
+                        },
+                      ),
+                      SizedBox(width: 6),
+                      MyIconButton(
+                        width: 70,
+                        height: 70,
+                        icon: Icon(
+                          Icons.play_arrow,
+                          size: 45,
+                          color: themeof.colorScheme.primary,
+                        ),
+                        onPressed: () {
+                          // TODO add play action
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
