@@ -28,9 +28,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter:
-  assets:
-    - .env
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - .env
