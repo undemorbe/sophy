@@ -1,35 +1,36 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Seed Color - Magenta
-  static const Color seedColor = Color.fromARGB(158, 223, 64, 251);
+  // Seed Colors
+  static const Color pastelPink = Color(0xFFFFB7B2);
+  static const Color orange = Color(0xFFFF9F0A);
+  static const Color violet = Color(0xFFAF52DE);
 
-  // Brand Colors
-  static const Color primary = seedColor;
-  static const Color secondary = Color(
-    0xFF32D74B,
-  ); // A vibrant green for accents
-  static const Color tertiary = Color(0xFFFF9F0A); // Orange for highlights
+  // Default Seed
+  static const Color seedColor = pastelPink;
+
+  // Brand Colors (Dynamic based on seed, but keeping defaults for reference)
+  static const Color primary = Color(0xFFFF9AA2);
+  static const Color secondary = Color(0xFFC7CEEA);
+  static const Color tertiary = Color(0xFFFFDAC1);
+
+  // Accent Colors
+  static const Color accent1 = Color(0xFFE2F0CB);
+  static const Color accent2 = Color(0xFFB5EAD7);
 
   // Light Theme Colors
-  static const Color backgroundLight = Color(0xFFF2F2F7);
+  static const Color backgroundLight = Color(0xFFFFF9FA);
   static const Color surfaceLight = Colors.white;
-  static const Color onBackgroundLight = Colors.black;
-  static const Color onSurfaceLight = Colors.black;
+  static const Color onBackgroundLight = Color(0xFF4A4A4A);
+  static const Color onSurfaceLight = Color(0xFF4A4A4A);
 
   // Dark Theme Colors
-  static const Color backgroundDark = Color(0xFF000000);
-  static const Color surfaceDark = Color(0xFF1C1C1E);
-  static const Color onBackgroundDark = Colors.white;
-  static const Color onSurfaceDark = Colors.white;
+  static const Color backgroundDark = Color(0xFF1C1C1E);
+  static const Color surfaceDark = Color(0xFF2C2C2E);
+  static const Color onBackgroundDark = Color(0xFFEAEAEA);
+  static const Color onSurfaceDark = Color(0xFFEAEAEA);
 
   // Semantic Colors
-  static const Color error = Color(0xFFFF453A);
-  static const Color success = Color(0xFF30D158);
-
-  // Chat Specific
-  static const Color myMessageBubbleLight = seedColor;
-  static const Color otherMessageBubbleLight = Color(0xFFE5E5EA);
-  static const Color myMessageBubbleDark = seedColor;
-  static const Color otherMessageBubbleDark = Color(0xFF2C2C2E);
+  static const Color error = Color(0xFFFF6961);
+  static const Color success = Color(0xFF77DD77);
 }

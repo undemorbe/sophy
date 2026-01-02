@@ -1,47 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:sophy/core/services/settings_service.dart';
+import 'package:sophy/core/constants/ui_constants.dart';
+import 'package:sophy/features/presentation/pages/settings/view/laptop/settings_page_laptop.dart';
+import 'package:sophy/features/presentation/pages/settings/view/mobile/settings_page_mobile.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final settings = SettingsService();
-    
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings'),
-      ),
-      body: AnimatedBuilder(
-        animation: settings,
-        builder: (context, child) {
-          return ListView(
-            children: [
-              ListTile(
-                leading: const Icon(Icons.brightness_6),
-                title: const Text('Theme'),
-                subtitle: Text(settings.themeMode == ThemeMode.dark ? 'Dark' : 'Light'),
-                trailing: Switch(
-                  value: settings.themeMode == ThemeMode.dark,
-                  onChanged: (value) {
-                    settings.toggleTheme();
-                  },
-                ),
-              ),
-              const Divider(),
-              ListTile(
-                leading: const Icon(Icons.language),
-                title: const Text('Language'),
-                subtitle: Text(settings.locale.languageCode == 'en' ? 'English' : 'Russian'),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () {
-                  settings.toggleLocale();
-                },
-              ),
-            ],
-          );
-        },
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth > kDesktopBreakpoint) {
+          return const SettingsPageLaptop();
+        } else {
+          return const SettingsPageMobile();
+        }
+      },
     );
   }
 }
