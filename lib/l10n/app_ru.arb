@@ -1,0 +1,15 @@
+{
+  "language": "Русский",
+  "user_greeting": "Hey {username}",
+  "homepage_appbar": "{is_mobile, select, 1{Новинки} 2{Новинки | Давай послушаем!} other{Новинки}}",
+  "searchpage_appbar": "{is_mobile, select, 1{Поиск} 2{Поиск | Слушать} other{Поиск}}",
+  "librarypage_appbar": "{is_mobile, select, 1{Исследуй} 2{Исследуй | Слушай} other{Исследуй}}",
+  "searchwidget_hint_text" : "{hint_text_type, select, 1{Песни, авторы, плейлисты} 2{Имя пользователя} other{Поиск}}",
+  "bottom_navigation_bar_homepage" : "Главная",
+  "bottom_navigation_bar_search" : "Поиск",
+  "bottom_navigation_bar_now_playing" : "Сейчас играет",
+  "bottom_navigation_bar_playlists" : "Медиатека",
+  "library_music_categories" : "Жанры",
+  "library_music_trending" : "В тренде",
+  "library_music_favorites" : "Ваши любимые"
+}

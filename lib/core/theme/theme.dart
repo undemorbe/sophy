@@ -26,6 +26,26 @@ class AppTheme {
         foregroundColor: AppColors.onSurfaceLight,
         elevation: 0,
       ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.surfaceLight,
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
+        elevation: 8,
+      ),
+      searchBarTheme: SearchBarThemeData(
+        backgroundColor: WidgetStateProperty.all(AppColors.surfaceLight),
+        elevation: WidgetStateProperty.all(2),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        ),
+        hintStyle: WidgetStateProperty.all(
+          const TextStyle(color: Colors.grey, fontSize: 16),
+        ),
+        textStyle: WidgetStateProperty.all(
+          const TextStyle(color: AppColors.onSurfaceLight, fontSize: 16),
+        ),
+      ),
     );
   }
 
@@ -51,6 +71,26 @@ class AppTheme {
         backgroundColor: AppColors.surfaceDark,
         foregroundColor: AppColors.onSurfaceDark,
         elevation: 0,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.surfaceDark,
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
+        elevation: 8,
+      ),
+      searchBarTheme: SearchBarThemeData(
+        backgroundColor: WidgetStateProperty.all(AppColors.surfaceLight),
+        elevation: WidgetStateProperty.all(2),
+        shape: WidgetStateProperty.all(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        ),
+        hintStyle: WidgetStateProperty.all(
+          const TextStyle(color: Colors.grey, fontSize: 16),
+        ),
+        textStyle: WidgetStateProperty.all(
+          const TextStyle(color: AppColors.onSurfaceLight, fontSize: 16),
+        ),
       ),
     );
   }

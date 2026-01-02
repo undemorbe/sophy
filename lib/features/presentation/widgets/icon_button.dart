@@ -8,12 +8,14 @@ class MyIconButton extends StatefulWidget {
     this.onPressed,
     required this.width,
     required this.height,
+    this.backgroundColor,
   });
   final Duration duration;
   final Widget icon;
   final VoidCallback? onPressed;
   final double width;
   final double height;
+  final Color? backgroundColor;
   @override
   State<MyIconButton> createState() => _MyIconButtonState();
 }
@@ -33,6 +35,7 @@ class _MyIconButtonState extends State<MyIconButton> {
 
   @override
   Widget build(BuildContext context) {
+    final themeof = Theme.of(context);
     return InkWell(
       borderRadius: BorderRadius.circular(25),
       onTap: () {
@@ -43,7 +46,7 @@ class _MyIconButtonState extends State<MyIconButton> {
         width: widget.width,
         height: widget.height,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: widget.backgroundColor ?? themeof.primaryColor,
           borderRadius: BorderRadius.circular(25),
         ),
         child: AnimatedScale(

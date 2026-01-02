@@ -25,8 +25,8 @@ class _MyCachedImageState extends State<MyCachedImage> {
   double containerHeight = 0;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     setState(() {
       containerWidth =
           widget.width ?? 100 + MediaQuery.of(context).size.width * 0.1;

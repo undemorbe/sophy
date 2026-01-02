@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  // Seed Color - Magenta
+  static const Color seedColor = Color.fromARGB(158, 223, 64, 251);
+
   // Brand Colors
-  static const Color primary = Color(0xFF5E5CE6); // A nice violet/blue
-  static const Color secondary = Color(0xFF32D74B); // A vibrant green for accents
+  static const Color primary = seedColor;
+  static const Color secondary = Color(
+    0xFF32D74B,
+  ); // A vibrant green for accents
   static const Color tertiary = Color(0xFFFF9F0A); // Orange for highlights
 
   // Light Theme Colors
@@ -21,10 +26,10 @@ class AppColors {
   // Semantic Colors
   static const Color error = Color(0xFFFF453A);
   static const Color success = Color(0xFF30D158);
-  
+
   // Chat Specific
-  static const Color myMessageBubbleLight = Color(0xFF5E5CE6);
+  static const Color myMessageBubbleLight = seedColor;
   static const Color otherMessageBubbleLight = Color(0xFFE5E5EA);
-  static const Color myMessageBubbleDark = Color(0xFF5E5CE6);
+  static const Color myMessageBubbleDark = seedColor;
   static const Color otherMessageBubbleDark = Color(0xFF2C2C2E);
 }

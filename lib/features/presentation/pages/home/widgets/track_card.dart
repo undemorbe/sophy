@@ -9,20 +9,27 @@ class TrackCard extends StatelessWidget {
     required this.artistName,
     required this.musicImageUrl,
     this.datePublishedFormated,
+    this.width,
+    this.height,
   });
 
   final String trackName;
   final String artistName;
   final String musicImageUrl;
   final String? datePublishedFormated;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
     final themeof = Theme.of(context);
+    final cardWidth = width ?? mediaQuery.size.width;
+    final cardHeight = height ?? mediaQuery.size.height * 0.4;
+
     return Container(
-      height: mediaQuery.size.height * 0.4,
-      width: mediaQuery.size.width,
+      height: cardHeight,
+      width: cardWidth,
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.transparent,
@@ -37,13 +44,13 @@ class TrackCard extends StatelessWidget {
               imageUrl: musicImageUrl,
               duration: Duration(milliseconds: 500),
               fit: BoxFit.cover,
-              height: mediaQuery.size.height * 0.39,
-              width: mediaQuery.size.width,
+              height: cardHeight * 0.975,
+              width: cardWidth,
             ),
           ),
           Container(
-            height: mediaQuery.size.height * 0.1,
-            width: mediaQuery.size.width,
+            height: cardHeight * 0.25,
+            width: cardWidth,
             decoration: BoxDecoration(
               color: themeof.colorScheme.primary,
               borderRadius: BorderRadius.only(
@@ -104,11 +111,11 @@ class TrackCard extends StatelessWidget {
                       ),
                       SizedBox(width: 6),
                       MyIconButton(
-                        width: 70,
-                        height: 70,
+                        width: 50,
+                        height: 50,
                         icon: Icon(
                           Icons.play_arrow,
-                          size: 45,
+                          size: 30,
                           color: themeof.colorScheme.primary,
                         ),
                         onPressed: () {

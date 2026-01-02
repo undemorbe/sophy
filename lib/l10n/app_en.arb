@@ -1,0 +1,98 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "Current language in app"
+  },
+
+  "user_greeting": "Hey {username}",
+  "@user_greeting" : {
+    "description" : "User greeting in app (Hello + username)",
+    "placeholders" : {
+        "username" : {
+            "type" : "String"
+        }
+    }
+  },
+
+
+
+  "homepage_appbar": "{is_mobile, select, 1{New Drops} 2{New Drops | Let''s listen them!} other{New Drops}}",
+  "@homepage_appbar" : {
+    "description" : "Home page appbar for mobile / laptop version text, 1 - mobile, 2 - laptop",
+    "placeholders" : {
+        "is_mobile" : {
+            "type" : "String"
+        }
+    }
+  },
+  
+  "searchpage_appbar": "{is_mobile, select, 1{Search} 2{Search | Listen} other{Search}}",
+  "@searchpage_appbar" : {
+    "description" : "Search page appbar for mobile / laptop version text, 1 - mobile, 2 - laptop",
+    "placeholders" : {
+        "is_mobile" : {
+            "type" : "String"
+        }
+    }
+  },
+  "liblarypage_appbar": "{is_mobile, select, 1{Discovery} 2{Discovery | Listen} other{Discovery}}",
+  "@liblarypage_appbar" : {
+    "description" : "Library page appbar for mobile / laptop version text, 1 - mobile, 2 - laptop",
+    "placeholders" : {
+        "is_mobile" : {
+            "type" : "String"
+        }
+    }
+  },
+
+
+  "searchwidget_hint_text" : "{hint_text_type, select, 1{Songs, authors, playlists} 2{Username} other{Search}}",
+    "@searchwidget_hint_text" : {
+    "description" : "Search widget hint text, 1 - songs/authors/playlists, 2 - users in app",
+    "placeholders" : {
+        "hint_text_type" : {
+            "type" : "String"
+        }
+    }
+  },
+  "library_music_categories" : "Categories",
+  "@library_music_categories" : {
+    "description" : "Text for library_music_categories"
+  },
+  
+  "library_music_trending" : "Trending right now",
+  "@library_music_trending" : {
+    "description" : "Text for library_music_trending layer"
+  },
+  
+  "library_music_favorites" : "Your favorites",
+  "@bottom_navigation_bar_homepage" : {
+    "description" : "Text for library_music_favorites layer"
+  },
+  
+
+
+
+
+  "bottom_navigation_bar_homepage" : "Home",
+  "@bottom_navigation_bar_homepage" : {
+    "description" : "Text for bottom_navigation_bar_homepage layer"
+  },
+  
+  "bottom_navigation_bar_search" : "Search",
+  "@bottom_navigation_bar_search" : {
+    "description" : "Text for bottom_navigation_bar_search layer"
+  },  
+  
+  "bottom_navigation_bar_now_playing" : "Playing",
+  "@bottom_navigation_bar_now_playing" : {
+    "description" : "Text for bottom_navigation_bar_now_playing layer"
+  },
+  
+  "bottom_navigation_bar_playlists" : "Library",
+  "@bottom_navigation_bar_playlists" : {
+    "description" : "Text for bottom_navigation_bar_playlists / library layer"
+  }
+
+
+}

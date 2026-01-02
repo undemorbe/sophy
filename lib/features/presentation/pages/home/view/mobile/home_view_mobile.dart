@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sophy/features/presentation/pages/home/widgets/track_card.dart';
 import 'package:sophy/features/presentation/widgets/icon_button.dart';
+import 'package:sophy/l10n/app_localizations.dart';
 
 class HomeViewMobile extends StatelessWidget {
   const HomeViewMobile({super.key});
@@ -8,18 +10,19 @@ class HomeViewMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeof = Theme.of(context);
+    final isMobile = MediaQuery.of(context).size.width < 600 ? '1' : '2';
     return Scaffold(
-      backgroundColor: themeof.colorScheme.background,
-      
+      backgroundColor: themeof.colorScheme.surface,
+
+      resizeToAvoidBottomInset: false,
+
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: themeof.colorScheme.background,
+        backgroundColor: themeof.colorScheme.surface,
 
         title: Text(
-          'New Drops',
-          style: themeof.textTheme.titleLarge?.copyWith(
-          ),
-
+          AppLocalizations.of(context)!.homepage_appbar(isMobile),
+          style: themeof.textTheme.titleLarge?.copyWith(),
           // TODO add subscription related main title
         ),
         actions: [
@@ -36,7 +39,7 @@ class HomeViewMobile extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                // TODO add upload action
+                context.push('/profile');
               },
             ),
           ),
@@ -50,7 +53,7 @@ class HomeViewMobile extends StatelessWidget {
             artistName: 'Artist $index',
             musicImageUrl:
                 'https://www.rollingstone.com/wp-content/uploads/2024/10/sh2.jpg?w=1581&h=1054&crop=1',
-            datePublishedFormated: '2023-01-01',
+            datePublishedFormated: '2025-02-12',
           );
         },
       ),
