@@ -30,14 +30,20 @@ jobs:
       - name: Install Dependencies
         run: flutter pub get
 
-      # - name: Check Formatting
-        # run: dart format --output=none --set-exit-if-changed .
+      - name: Check Formatting
+        run: dart format --output=none --set-exit-if-changed .
 
       - name: Run Linter
         run: flutter analyze
 
-      - name: Run Tests
-        run: flutter test
+      - name: Run Tests with Coverage
+        run: flutter test --coverage
+
+      - name: Upload Coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/lcov.info
 
       - name: Build Android APK
         run: flutter build apk --release --no-codesign
