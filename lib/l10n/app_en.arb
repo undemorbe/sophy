@@ -66,7 +66,7 @@
   },
   
   "library_music_favorites" : "Your favorites",
-  "@bottom_navigation_bar_homepage" : {
+  "@library_music_favorites" : {
     "description" : "Text for library_music_favorites layer"
   },
   
@@ -92,7 +92,50 @@
   "bottom_navigation_bar_playlists" : "Library",
   "@bottom_navigation_bar_playlists" : {
     "description" : "Text for bottom_navigation_bar_playlists / library layer"
+  },
+
+  "settings_title": "Settings",
+  "@settings_title": {
+    "description": "Title for the settings page"
+  },
+  "settings_theme": "Theme",
+  "@settings_theme": {
+    "description": "Label for theme setting"
+  },
+  "settings_theme_mode": "Theme Mode",
+  "@settings_theme_mode": {
+    "description": "Label for theme mode (light/dark)"
+  },
+  "settings_theme_light": "Light",
+  "@settings_theme_light": {
+    "description": "Label for light theme"
+  },
+  "settings_theme_dark": "Dark",
+  "@settings_theme_dark": {
+    "description": "Label for dark theme"
+  },
+  "settings_theme_system": "System",
+  "@settings_theme_system": {
+    "description": "Label for system theme"
+  },
+  "settings_language": "Language",
+  "@settings_language": {
+    "description": "Label for language setting"
+  },
+  "settings_color_scheme": "Color Scheme",
+  "@settings_color_scheme": {
+    "description": "Label for color scheme setting"
+  },
+  "settings_crash_reporting": "Crash Reporting",
+  "@settings_crash_reporting": {
+    "description": "Label for crash reporting setting"
+  },
+  "settings_crash_reporting_subtitle": "Automatically send error reports to developers",
+  "@settings_crash_reporting_subtitle": {
+    "description": "Subtitle for crash reporting setting"
+  },
+  "settings_privacy": "Privacy",
+  "@settings_privacy": {
+    "description": "Label for privacy settings section"
   }
-
-
 }

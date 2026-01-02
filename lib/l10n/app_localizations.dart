@@ -146,7 +146,7 @@ abstract class AppLocalizations {
   /// **'Trending right now'**
   String get library_music_trending;
 
-  /// No description provided for @library_music_favorites.
+  /// Text for library_music_favorites layer
   ///
   /// In en, this message translates to:
   /// **'Your favorites'**
@@ -175,6 +175,72 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Library'**
   String get bottom_navigation_bar_playlists;
+
+  /// Title for the settings page
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings_title;
+
+  /// Label for theme setting
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get settings_theme;
+
+  /// Label for theme mode (light/dark)
+  ///
+  /// In en, this message translates to:
+  /// **'Theme Mode'**
+  String get settings_theme_mode;
+
+  /// Label for light theme
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get settings_theme_light;
+
+  /// Label for dark theme
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get settings_theme_dark;
+
+  /// Label for system theme
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get settings_theme_system;
+
+  /// Label for language setting
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settings_language;
+
+  /// Label for color scheme setting
+  ///
+  /// In en, this message translates to:
+  /// **'Color Scheme'**
+  String get settings_color_scheme;
+
+  /// Label for crash reporting setting
+  ///
+  /// In en, this message translates to:
+  /// **'Crash Reporting'**
+  String get settings_crash_reporting;
+
+  /// Subtitle for crash reporting setting
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically send error reports to developers'**
+  String get settings_crash_reporting_subtitle;
+
+  /// Label for privacy settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy'**
+  String get settings_privacy;
 }
 
 class _AppLocalizationsDelegate

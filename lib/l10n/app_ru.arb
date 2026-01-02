@@ -11,5 +11,17 @@
   "bottom_navigation_bar_playlists" : "Медиатека",
   "library_music_categories" : "Жанры",
   "library_music_trending" : "В тренде",
-  "library_music_favorites" : "Ваши любимые"
+  "library_music_favorites" : "Ваши любимые",
+
+  "settings_title": "Настройки",
+  "settings_theme": "Тема",
+  "settings_theme_mode": "Режим темы",
+  "settings_theme_light": "Светлая",
+  "settings_theme_dark": "Темная",
+  "settings_theme_system": "Системная",
+  "settings_language": "Язык",
+  "settings_color_scheme": "Цветовая схема",
+  "settings_crash_reporting": "Отчеты об ошибках",
+  "settings_crash_reporting_subtitle": "Автоматически отправлять отчеты об ошибках разработчикам",
+  "settings_privacy": "Конфиденциальность"
 }

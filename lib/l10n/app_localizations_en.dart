@@ -76,4 +76,38 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get bottom_navigation_bar_playlists => 'Library';
+
+  @override
+  String get settings_title => 'Settings';
+
+  @override
+  String get settings_theme => 'Theme';
+
+  @override
+  String get settings_theme_mode => 'Theme Mode';
+
+  @override
+  String get settings_theme_light => 'Light';
+
+  @override
+  String get settings_theme_dark => 'Dark';
+
+  @override
+  String get settings_theme_system => 'System';
+
+  @override
+  String get settings_language => 'Language';
+
+  @override
+  String get settings_color_scheme => 'Color Scheme';
+
+  @override
+  String get settings_crash_reporting => 'Crash Reporting';
+
+  @override
+  String get settings_crash_reporting_subtitle =>
+      'Automatically send error reports to developers';
+
+  @override
+  String get settings_privacy => 'Privacy';
 }

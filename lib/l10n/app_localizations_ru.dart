@@ -76,4 +76,38 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get bottom_navigation_bar_playlists => 'Медиатека';
+
+  @override
+  String get settings_title => 'Настройки';
+
+  @override
+  String get settings_theme => 'Тема';
+
+  @override
+  String get settings_theme_mode => 'Режим темы';
+
+  @override
+  String get settings_theme_light => 'Светлая';
+
+  @override
+  String get settings_theme_dark => 'Темная';
+
+  @override
+  String get settings_theme_system => 'Системная';
+
+  @override
+  String get settings_language => 'Язык';
+
+  @override
+  String get settings_color_scheme => 'Цветовая схема';
+
+  @override
+  String get settings_crash_reporting => 'Отчеты об ошибках';
+
+  @override
+  String get settings_crash_reporting_subtitle =>
+      'Автоматически отправлять отчеты об ошибках разработчикам';
+
+  @override
+  String get settings_privacy => 'Конфиденциальность';
 }
