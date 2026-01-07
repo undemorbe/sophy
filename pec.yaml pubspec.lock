@@ -1,0 +1,46 @@
+[1mdiff --git a/pubspec.yaml b/pubspec.yaml[m
+[1mindex b8bb63e..c081752 100644[m
+[1m--- a/pubspec.yaml[m
+[1m+++ b/pubspec.yaml[m
+[36m@@ -9,29 +9,41 @@[m [menvironment:[m
+ dependencies:[m
+   build_runner: ^2.4.6[m
+   cached_network_image: ^3.4.1[m
+[32m+[m[32m  connectivity_plus: ^7.0.0[m
+[32m+[m[32m  device_info_plus: ^12.3.0[m
+   dio: ^5.9.0[m
+[32m+[m[32m  file_picker: ^10.3.8[m
+   flutter:[m
+     sdk: flutter[m
+   flutter_dotenv: ^6.0.0[m
+   flutter_localization: ^0.3.3[m
+   flutter_localizations:[m
+     sdk: flutter[m
+[32m+[m[32m  flutter_mobx: ^2.3.0[m
+   get_it: ^9.2.0[m
+   go_router: ^17.0.1[m
+   google_fonts: ^6.3.3[m
+   hive: ^2.2.3[m
+   hive_generator: ^2.0.1[m
+   intl: ^0.20.2[m
+[32m+[m[32m  json_annotation: ^4.9.0[m
+[32m+[m[32m  just_audio: ^0.10.5[m
+   mobx: ^2.5.0[m
+[32m+[m[32m  package_info_plus: ^9.0.0[m
+[32m+[m[32m  shared_preferences: ^2.5.4[m
+   supabase: ^2.10.2[m
+   supabase_flutter: ^2.10.2[m
+   talker_dio_logger: ^5.1.9[m
+   talker_flutter: ^5.1.9[m
+[32m+[m[32m  uuid: ^4.5.2[m
+ [m
+ dev_dependencies:[m
+   flutter_lints: ^6.0.0[m
+   flutter_test:[m
+     sdk: flutter[m
+[32m+[m[32m  json_serializable: ^6.8.0[m
+[32m+[m[32m  mobx_codegen: ^2.7.0[m
+[32m+[m[32m  mockito: ^5.4.4[m
+ [m
+ flutter:[m
+   uses-material-design: true[m
